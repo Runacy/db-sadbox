@@ -7,7 +7,6 @@ services:
       context: .
       dockerfile: ./docker/postgres.dockerfile
     container_name: postgressql
-    restart: always
     ports:
       - 55432:5432
     environment:
