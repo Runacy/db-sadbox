@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  postgressql:
+    build: 
+      context: .
+      dockerfile: ./docker/postgres.dockerfile
+    container_name: postgressql
+    restart: always
+    ports:
+      - 55432:5432
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_USER: user
+      POSTGRES_DB: sample
+    volumes:
+      - .:/works
+    
